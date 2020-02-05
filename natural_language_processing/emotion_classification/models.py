@@ -120,20 +120,3 @@ class DenseExtension(nn.Module):
         x = self.dropout(x)
         x = self.fc5(x)
         return x
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
