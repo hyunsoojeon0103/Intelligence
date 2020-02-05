@@ -143,7 +143,6 @@ class Frontier(object):
         return heapq.heappop(self.hq)
 
 # Function that Writes to output.txt
-### Students need to change the method to have the corresponding parameters
 def writeOutput(child,numOfExpands,maxDepth,timeTaken):
     cost = child.cost 
     parent = child.parent
