@@ -16,8 +16,7 @@ import models
 DATA_FN = 'data/crowdflower_data.csv'
 LABEL_NAMES = ["happiness", "worry", "neutral", "sadness"]
 
-# Global definitions - architecture
-EMBEDDING_DIM = 100  # We will use pretrained 100-dimensional GloVe
+EMBEDDING_DIM = 100 
 BATCH_SIZE = 128
 NUM_CLASSES = 4
 USE_CUDA = torch.cuda.is_available()  
@@ -67,7 +66,6 @@ def train_model(model, loss_fn, optimizer, train_generator, dev_generator):
         if devLoss > best + patient:
             print("Stopped improving...break")
             break
-    # returns the best model
     out = torch.load("best.pth")
     return out
         
@@ -88,7 +86,6 @@ def test_model(model, loss_fn, test_generator):
             # Predict
             y_pred = model(X_b)
 
-            # Save gold and predicted labels for F1 score - take the argmax to convert to class labels
             gold.extend(y_b.cpu().detach().numpy())
             predicted.extend(y_pred.argmax(1).cpu().detach().numpy())
 
