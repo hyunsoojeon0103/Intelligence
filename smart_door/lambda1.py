@@ -282,7 +282,7 @@ def downloadFromS3(bucket, key, path):
 
 def sendVerification(faceId):
     # send a photo to ourselves and we will verify the person
-    sender = 'hj2509@columbia.edu'
+    sender = 'hyunsoojeon0103@google.com'
     recipients = [sender]
     title = 'Smart Authentication - Unknown Face Verification'
     body = '<html><head></head><body><p>                                                \
