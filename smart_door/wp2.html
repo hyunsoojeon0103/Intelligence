@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <title> Smart Door System - Verification Form (WP2) </title>
+      <meta charset="utf-8" />
+      <link rel="stylesheet" href="./style.css" type="text/css">
+    </head>
+    <body>
+	<form action="javascript:void(0);">
+	    <div class="container">
+		<h1>Register</h1>
+		<p>Please enter the passcode</p>
+		<hr>
+        <label for="OTP"><b>Enter OTP</b></label>
+        <input type="text" id="OTP" name="OTP" required>
+		<hr>
+    		<button type="submit" class="registerbtn" onclick="submitOTP()">Submit</button>
+	    </div>
+	</form> 
+	<script type="text/javascript" src="lib/axios/dist/axios.standalone.js"></script>
+	<script type="text/javascript" src="lib/CryptoJS/rollups/hmac-sha256.js"></script>
+	<script type="text/javascript" src="lib/CryptoJS/rollups/sha256.js"></script>
+	<script type="text/javascript" src="lib/CryptoJS/components/hmac.js"></script>
+	<script type="text/javascript" src="lib/CryptoJS/components/enc-base64.js"></script>
+	<script type="text/javascript" src="lib/url-template/url-template.js"></script>
+	<script type="text/javascript" src="lib/apiGatewayCore/sigV4Client.js"></script>
+	<script type="text/javascript" src="lib/apiGatewayCore/apiGatewayClient.js"></script>
+	<script type="text/javascript" src="lib/apiGatewayCore/simpleHttpClient.js"></script>
+	<script type="text/javascript" src="lib/apiGatewayCore/utils.js"></script>
+	<script type="text/javascript" src="apigClient.js"></script>
+	<script type="text/javascript" src="api.js"></script>
+    </body>
+</html>
